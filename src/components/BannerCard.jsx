@@ -4,14 +4,12 @@ import {
   Card,
   CardActions,
   CardContent,
-  CardHeader,
   CardMedia,
   styled,
   Typography,
 } from "@mui/material";
 import PropTypes from "prop-types";
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
 const StyledCard = styled(Card)(({ theme }) => ({
   width: "350px",
@@ -21,45 +19,34 @@ const StyledCard = styled(Card)(({ theme }) => ({
   justifyContent: "center",
   alignItems: "center",
   backgroundColor: "white",
-  borderLeft: "13px solid #1A254F",
-  // borderRadius: "10px",
+  borderLeft: "10px solid #F99929",
+  borderRadius: "10px",
   [theme.breakpoints.down("md")]: {
     height: "150px",
-    width: "300px"
-  }
+    width: "300px",
+  },
 }));
 
 const BannerCard = ({ text, img, link }) => {
-  const navigate = useNavigate();
   return (
     <StyledCard>
       <Box
         style={{ display: "flex", flexDirection: "row", alignItems: "center" }}
       >
-        {/* <CardMedia
-          component="img"
-          image="src/assets/synthetic-8597464_1920.jpg"
-          alt="icon"
-        /> */}
         <CardMedia
           component={"img"}
-          sx={{ width: "70px", height: "70px" }}
+          sx={{ width: "90px", height: "70px" }}
           image={`src/assets/${img}`}
           alt="image"
         />
-        <CardContent >
+        <CardContent>
           <Typography color="#465489" fontWeight={600} fontFamily={"Verdana"}>
             {text}
           </Typography>
         </CardContent>
         <CardActions>
           {link && (
-            <Button
-              variant="outlined"
-              onClick={() => {
-                navigate(link);
-              }}
-            >
+            <Button variant="outlined" onClick={() => { }}>
               Know More
             </Button>
           )}

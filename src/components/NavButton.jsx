@@ -1,21 +1,23 @@
 import PropTypes from "prop-types";
 import { Button, Typography } from "@mui/material";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-scroll";
 
-const NavButton = ({ pathname, text, link }) => {
-  const navigate = useNavigate();
+const NavButton = ({ text, link }) => {
   return (
-    <Button
-      variant="outline"
-      onClick={() => navigate(link)}
-      sx={{
-        width: "max-content",
-        backgroundColor: pathname === link ? "rgb(108, 163, 177)" : "#465489",
-        color: pathname === link ? "#1A254F" : "#9B9B9B",
-      }}
-    >
-      {text}
-    </Button>
+    <Link to={link} smooth>
+      <Button
+        variant="outline"
+        sx={{
+          color: "#636262",
+          width: "max-content",
+          textTransform: "none",
+          fontSize: "18px",
+          fontFamily: "Calibri",
+        }}
+      >
+        {text}
+      </Button>
+    </Link>
   );
 };
 

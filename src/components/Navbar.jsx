@@ -1,7 +1,6 @@
 import {
   AppBar,
   Box,
-  Button,
   Drawer,
   IconButton,
   List,
@@ -13,8 +12,6 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import NavButton from "./NavButton";
-import { Link } from "react-scroll";
-import { useLocation, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const ButtonsList = styled(List)(({ theme }) => ({
@@ -30,17 +27,17 @@ const ButtonsList = styled(List)(({ theme }) => ({
   },
 }));
 
-const Buttons = ({ pathname }) => {
+const Buttons = () => {
   return (
     <ButtonsList>
       <ListItem>
-        <NavButton pathname={pathname} text={"Home"} link={"/"} />
+        <NavButton text={"Who We Are"} link={"whoWeAre"} />
       </ListItem>
       <ListItem>
-        <NavButton pathname={pathname} text={"About Us"} link={"/about"} />
+        <NavButton text={"What We Offer "} link={"whatWeOffer"} />
       </ListItem>
       <ListItem>
-        <NavButton pathname={pathname} text={"Contact Us"} link={"/contact"} />
+        <NavButton text={"Contact Us"} link={"contactUs"} />
       </ListItem>
     </ButtonsList>
   );
@@ -65,88 +62,76 @@ const MobileButtonsBox = styled(Box)(({ theme }) => ({
 }));
 
 const Navbar = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
-
   const [openDrawer, setOpenDrawer] = useState(false);
   return (
     <AppBar
-      position="sticky"
+      id="navbar"
+      position="static"
       style={{
-        backgroundColor: "#1A254F",
-        height: "66px",
+        backgroundColor: "white",
+        height: "108px",
         justifyContent: "center",
       }}
     >
-      <Toolbar>
-        <Box sx={{ flexGrow: 1 }}>
-          {location.pathname === "/" ? (
-            <Button style={{ padding: "0px", textTransform: "none" }}>
-              <Link
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-                to="banner"
-                smooth
-              >
-                <Box
-                  style={{
-                    display: "flex",
-                    gap: "10px",
-                    backgroundColor: "white",
-                    padding: "10px",
-                    borderRadius: "30px",
-                    alignItems: "center",
-                  }}
-                >
-                  <img src="./src/assets/hxp_logo.png" height={"25px"} />
-                  <Typography
-                    fontWeight={"600"}
-                    fontSize={"18px"}
-                    color="rgb(26, 37, 79)"
-                  >
-                    Healthx Partner LLC
-                  </Typography>
-                </Box>
-              </Link>
-            </Button>
-          ) : (
-            <Button
-              onClick={() => navigate("/")}
-              style={{ padding: "0px", textTransform: "none" }}
+      <Toolbar
+        sx={{ height: "100%", alignItems: "flex-end", position: "relative" }}
+      >
+        <Box
+          sx={{
+            width: "60%",
+            height: "100%",
+            position: "absolute",
+            backgroundColor: "#00000010",
+            top: 0,
+            right: 0,
+            borderRadius: "125px 0px 0px 0px",
+          }}
+        ></Box>
+        <Box
+          sx={{
+            flexGrow: 1,
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            marginLeft: "40px",
+          }}
+        >
+          <Box
+            style={{
+              display: "flex",
+              gap: "10px",
+              backgroundColor: "white",
+              padding: "10px",
+              borderRadius: "30px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src="./src/assets/hxp_logo.png"
+              height={"50px"}
+            />
+            <Typography
+              fontWeight={"600"}
+              fontSize={"27px"}
+              color="rgb(26, 37, 79)"
+              fontFamily={"Helvetica"}
+              lineHeight={"27px"}
             >
-              <Box
-                style={{
-                  display: "flex",
-                  gap: "10px",
-                  backgroundColor: "white",
-                  padding: "10px",
-                  borderRadius: "30px",
-                  alignItems: "center",
-                }}
-              >
-                <img src="./src/assets/hxp_logo.png" height={"25px"} />
-                <Typography
-                  fontWeight={"600"}
-                  fontSize={"18px"}
-                  color="rgb(26, 37, 79)"
-                >
-                  Healthx Partner LLC
-                </Typography>
-              </Box>
-            </Button>
-          )}
+              HealthX
+              <br />
+              Partner
+            </Typography>
+          </Box>
         </Box>
         <DesktopButtonsBox>
-          <Buttons pathname={location.pathname} />
+          <Buttons />
         </DesktopButtonsBox>
         <MobileButtonsBox>
           <IconButton onClick={() => setOpenDrawer(true)}>
             <MenuIcon style={{ color: "#9B9B9B" }} />
           </IconButton>
           <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
-            <Buttons pathname={location.pathname} />
+            <Buttons />
           </Drawer>
         </MobileButtonsBox>
       </Toolbar>
