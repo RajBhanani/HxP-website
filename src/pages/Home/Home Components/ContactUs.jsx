@@ -22,7 +22,7 @@ const ContactUsBox = styled(Box)({
 const SideImageBox = styled(Box)(({ theme }) => ({
   width: "500px",
   height: "100vh",
-  backgroundImage: "url(/src/assets/iStock-1719539154_500_300_s_c1.jpg)",
+  backgroundImage: "url(/./assets/iStock-1719539154_500_300_s_c1.jpg)",
   backgroundSize: "cover",
   backgroundPosition: "-400px 0px",
   borderRadius: "0px 100px 0px 0px",
@@ -38,7 +38,7 @@ const SideImageBox = styled(Box)(({ theme }) => ({
 const FormBox = styled(Box)(({ theme }) => ({
   width: "100%",
   minHeight: "100vh",
-  padding: "50px 100px",
+  padding: "80px 100px",
   gap: "30px",
   display: "flex",
   flexDirection: "column",
@@ -177,18 +177,18 @@ const ContactUs = () => {
           padding={"0px 20px"}
           fontSize={"44px"}
           borderLeft={"10px solid #F99929"}
+          fontFamily={"Calibri"}
         >
           Contact Us
         </Typography>
       </SideImageBox>
       <FormBox>
-        <Typography color="#636262">Schedule a meeting</Typography>
-        <Typography color="#636262" fontSize={"32px"}>
-          Connect with Us
+        <Typography color="#636262" fontFamily={"Calibri"} fontSize={"32px"}>
+          Connect With Us
         </Typography>
         <form onSubmit={handleSubmit}>
           <FormGroup>
-            <Grid2 container spacing={{ xs: 2, md: 3, lg: 6 }}>
+            <Grid2 container rowSpacing={{ xs: 2, md: 3, lg: 6 }} columnSpacing={{xs: 2, md: 3, lg: 3}}>
               <Grid2 size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                 <FormControl error={fullNameError} fullWidth>
                   <TextField
@@ -236,7 +236,7 @@ const ContactUs = () => {
               <Grid2 size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                 <FormControl error={phoneNumberError} fullWidth>
                   <Grid2 container spacing={2}>
-                    <Grid2 size={{ xs: 12, sm: 8, md: 8, lg: 8 }}>
+                    <Grid2 size={{ xs: 12, sm: 8, md: 8, lg: 7 }}>
                       <Autocomplete
                         fullWidth
                         required
@@ -251,7 +251,7 @@ const ContactUs = () => {
                         )}
                       />
                     </Grid2>
-                    <Grid2 size={{ xs: 12, sm: 4, md: 4, lg: 4 }}>
+                    <Grid2 size={{ xs: 12, sm: 4, md: 4, lg: 5 }}>
                       <TextField
                         fullWidth
                         required
@@ -323,7 +323,7 @@ const ContactUs = () => {
                     borderRadius: "24px",
                   }}
                 >
-                  Schedule a meeting
+                  Submit
                 </Button>
               </Grid2>
             </Grid2>

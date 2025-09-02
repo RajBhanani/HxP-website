@@ -34,7 +34,10 @@ const Buttons = () => {
         <NavButton text={"Who We Are"} link={"whoWeAre"} />
       </ListItem>
       <ListItem>
-        <NavButton text={"What We Offer "} link={"whatWeOffer"} />
+        <NavButton text={"What We Offer"} link={"whatWeOffer"} />
+      </ListItem>
+      <ListItem>
+        <NavButton text={"Our Experts"} link={"ourExperts"} />
       </ListItem>
       <ListItem>
         <NavButton text={"Contact Us"} link={"contactUs"} />
@@ -93,7 +96,6 @@ const Navbar = () => {
             height: "100%",
             display: "flex",
             alignItems: "center",
-            marginLeft: "40px",
           }}
         >
           <Box
@@ -107,7 +109,7 @@ const Navbar = () => {
             }}
           >
             <img
-              src="./src/assets/hxp_logo.png"
+              src="./assets/hxp_logo.png"
               height={"50px"}
             />
             <Typography

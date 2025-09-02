@@ -47,12 +47,12 @@ const OurCommitment = () => {
           gap: "15px",
         }}
       >
-        <Typography color="#022A72" fontFamily="Calibri" fontSize={"32px"}>
+        <Typography color="#022A72" fontFamily={"Calibri"} fontSize={"32px"}>
           Our Commitment
         </Typography>
         <Typography
           color="#022A72"
-          fontFamily="Calibri"
+          fontFamily={"Calibri"}
           fontSize={"24px"}
           fontWeight={"600"}
         >
@@ -60,16 +60,16 @@ const OurCommitment = () => {
           healthcare technology companies and ensure their transformative
           innovations reach the patients and providers who need them most.
         </Typography>
-        <Typography color="#636262" fontFamily="Calibri">
+        <Typography color="#636262" fontFamily={"Calibri"} fontSize={"24px"}>
           <strong>
             We&#39;re here to be more than just consultants—we&#39;re your
             partners.
           </strong>
-          Together, let&#39;s shape the future of healthcare, one milestone at a
-          time.
+          &nbsp; Together, let&#39;s shape the future of healthcare, one
+          milestone at a time.
         </Typography>
       </Box>
-      <img src="./src/assets/doctors-wearing-vr-simulation-with-hologram-medical-technology.jpg" />
+      <img src="./assets/doctors-wearing-vr-simulation-with-hologram-medical-technology.jpg" />
     </StyledBox>
   );
 };

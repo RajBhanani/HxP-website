@@ -45,10 +45,10 @@ const Footer = () => {
         }}
       >
         <img
-          src="./src/assets/Transparant BG_HealthX_Logo_Option1-04@2x.png"
+          src="./assets/Transparant BG_HealthX_Logo_Option1-04@2x.png"
           height={"50px"}
         />
-        <Typography fontWeight={600} fontSize={"29px"} lineHeight={"25px"}>
+        <Typography fontWeight={600} fontSize={"29px"} lineHeight={"25px"} fontFamily={"Calibri"}>
           HealthX <br />
           Partner
         </Typography>
@@ -56,13 +56,13 @@ const Footer = () => {
       <NavigationBox>
         <Box>
           <Link to="navbar" smooth style={{ cursor: "pointer" }}>
-            <Typography>Top</Typography>
+            <Typography fontFamily={"Calibri"} fontSize={"18px"}>Top</Typography>
           </Link>
           <Link to="whoWeAre" smooth style={{ cursor: "pointer" }}>
-            <Typography>Who We Are</Typography>
+            <Typography fontFamily={"Calibri"} fontSize={"18px"}>Who We Are</Typography>
           </Link>
           <Link to="whatWeOffer" smooth style={{ cursor: "pointer" }}>
-            <Typography>What We Offer</Typography>
+            <Typography fontFamily={"Calibri"} fontSize={"18px"}>What We Offer</Typography>
           </Link>
         </Box>
       </NavigationBox>

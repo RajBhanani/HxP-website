@@ -1,10 +1,4 @@
-import {
-  Box,
-  List,
-  ListItemButton,
-  styled,
-  Typography,
-} from "@mui/material";
+import { Box, List, ListItemButton, styled, Typography } from "@mui/material";
 import { Link } from "react-scroll";
 
 const StyledBox = styled(Box)(({ theme }) => ({
@@ -63,8 +57,7 @@ const FloatingBox = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down("md")]: {
     position: "relative",
-    "& > div": {
-    },
+    "& > div": {},
     "& div:last-of-type p": {
       borderRight: "none",
     },
@@ -74,7 +67,7 @@ const FloatingBox = styled(Box)(({ theme }) => ({
 const FloatingBoxTextBox = styled(Box)(({ theme }) => ({
   display: "grid",
   gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
-  color: "#636262",
+  color: "#022A72",
   textAlign: "left",
   gap: "20px",
   "& p": {
@@ -103,11 +96,7 @@ const WhatWeOffer = ({ setOffer }) => {
           gap: "20px",
         }}
       >
-        <Typography
-          fontSize={"32px"}
-          color="rgba(99, 98, 98, 1)"
-          fontFamily={"Calibri"}
-        >
+        <Typography fontSize={"32px"} color="#022A72" fontFamily={"Calibri"}>
           What We Offer...
         </Typography>
         <Typography
@@ -130,7 +119,11 @@ const WhatWeOffer = ({ setOffer }) => {
                 setOffer(0);
               }}
             >
-              <Typography fontSize={"16px"} color="#F99929">
+              <Typography
+                fontSize={"18px"}
+                color="#3d3c3c"
+                fontFamily={"Calibri"}
+              >
                 Market Analysis & Competitive Positioning
               </Typography>
             </Link>
@@ -144,7 +137,11 @@ const WhatWeOffer = ({ setOffer }) => {
                 setOffer(1);
               }}
             >
-              <Typography fontSize={"16px"} color="#F99929">
+              <Typography
+                fontSize={"18px"}
+                color="#3d3c3c"
+                fontFamily={"Calibri"}
+              >
                 Ecosystem Mapping & Customer Dynamics
               </Typography>
             </Link>
@@ -158,7 +155,11 @@ const WhatWeOffer = ({ setOffer }) => {
                 setOffer(2);
               }}
             >
-              <Typography fontSize={"16px"} color="#F99929">
+              <Typography
+                fontSize={"18px"}
+                color="#3d3c3c"
+                fontFamily={"Calibri"}
+              >
                 Sales & Marketing Strategy
               </Typography>
             </Link>
@@ -172,7 +173,11 @@ const WhatWeOffer = ({ setOffer }) => {
                 setOffer(3);
               }}
             >
-              <Typography fontSize={"16px"} color="#F99929">
+              <Typography
+                fontSize={"18px"}
+                color="#3d3c3c"
+                fontFamily={"Calibri"}
+              >
                 Customer Engagement & Business Development
               </Typography>
             </Link>
@@ -186,7 +191,11 @@ const WhatWeOffer = ({ setOffer }) => {
                 setOffer(4);
               }}
             >
-              <Typography fontSize={"16px"} color="#F99929">
+              <Typography
+                fontSize={"18px"}
+                color="#3d3c3c"
+                fontFamily={"Calibri"}
+              >
                 Operational & Post-Sales Support
               </Typography>
             </Link>
@@ -204,12 +213,16 @@ const WhatWeOffer = ({ setOffer }) => {
         }}
       >
         <img
-          src="./src/assets/iStock-1719539154_500_300_s_c1.jpg"
+          src="./assets/iStock-1719539154_500_300_s_c1.jpg"
           style={{ borderRadius: "20px" }}
         />
         <FloatingBox>
           <Box>
-            <Typography fontSize={"20px"} color="#F99929">
+            <Typography
+              fontSize={"24px"}
+              color="#F99929"
+              fontFamily={"Calibri"}
+            >
               Our Focus Areas
             </Typography>
           </Box>

@@ -13,6 +13,10 @@ const NavButton = ({ text, link }) => {
           textTransform: "none",
           fontSize: "18px",
           fontFamily: "Calibri",
+          fontWeight: 600,
+          "&:hover": {
+            backgroundColor: "#00000015"
+          }
         }}
       >
         {text}

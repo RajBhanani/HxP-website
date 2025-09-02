@@ -2,10 +2,9 @@ import { Box, Grid2, styled, Typography } from "@mui/material";
 import BannerCard from "../../../components/BannerCard";
 
 const BannerBackgroundBox = styled(Box)(({ theme }) => ({
-  minHeight: "calc(100vh - 108px)",
-  backgroundColor: "red",
+  minHeight: "100vh",
   background:
-    "url(./src/assets/touching-human-robot-hands-artificial-intelligence-technology.png)",
+    "url(./assets/touching-human-robot-hands-artificial-intelligence-technology.png)",
   backgroundPosition: "center",
   backgroundSize: "cover",
   [theme.breakpoints.down("lg")]: {
@@ -14,6 +13,7 @@ const BannerBackgroundBox = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down("md")]: {
     backgroundPosition: "center 120%",
+    minHeight: "100vh",
   },
   [theme.breakpoints.down("sm")]: {
     backgroundPosition: "center 130%",
@@ -21,7 +21,7 @@ const BannerBackgroundBox = styled(Box)(({ theme }) => ({
 }));
 
 const BannerBox = styled(Box)(({ theme }) => ({
-  minHeight: "calc(100vh - 108px)",
+  minHeight: "100vh",
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
@@ -29,6 +29,7 @@ const BannerBox = styled(Box)(({ theme }) => ({
   padding: "50px",
   [theme.breakpoints.down("md")]: {
     padding: "30px 10px",
+    minHeight: "100vh",
   },
 }));
 
@@ -39,12 +40,13 @@ const Banner = () => {
         <Typography
           color="white"
           variant="h3"
-          fontSize={"45px"}
+          fontSize={"47px"}
           fontWeight={600}
           textAlign={"center"}
           lineHeight={"70px"}
+          fontFamily={"Calibri"}
         >
-          ⁠Partnering for Healthier, Smarter Future
+          ⁠Partnering for a Healthier, Smarter Future
         </Typography>
         <Grid2 container gap={3} justifyContent={"center"}>
           <Grid2>
@@ -55,13 +57,13 @@ const Banner = () => {
           </Grid2>
           <Grid2>
             <BannerCard
-              text={"Expanding access, extending care's reach"}
+              text={"Expanding access, extending care"}
               img={"path-15.svg"}
             />
           </Grid2>
           <Grid2>
             <BannerCard
-              text={"Partnering for patient-centered care, everywhere"}
+              text={"Partnering for patient-centered care"}
               img={"path-14.svg"}
             />
           </Grid2>

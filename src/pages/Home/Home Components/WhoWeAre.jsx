@@ -1,11 +1,4 @@
-import {
-  Box,
-  Grid2,
-  List,
-  ListItem,
-  styled,
-  Typography,
-} from "@mui/material";
+import { Box, Grid2, List, ListItem, styled, Typography } from "@mui/material";
 import { Link } from "react-scroll";
 
 const StyledGrid = styled(Grid2)(({ theme }) => ({
@@ -13,12 +6,12 @@ const StyledGrid = styled(Grid2)(({ theme }) => ({
   background: "#ffffff",
   display: "flex",
   justifyContent: "center",
-  alignItems: "center",
+  // alignItems: "center",
   padding: "50px 0px",
   gap: "10vw",
   "&>img": {
-    height: "400px",
-    width: "400px",
+    height: "450px",
+    width: "450px",
     objectFit: "cover",
     objectPosition: "-150px",
   },
@@ -54,7 +47,7 @@ const StyledGrid = styled(Grid2)(({ theme }) => ({
 const WhoWeAre = () => {
   return (
     <StyledGrid container id="whoWeAre">
-      <img src="./src/assets/who_we_are.jpg" style={{ borderRadius: "20px" }} />
+      <img src="./assets/who_we_are.jpg" style={{ borderRadius: "20px" }} />
       <Box
         style={{
           height: "100%",
@@ -66,23 +59,23 @@ const WhoWeAre = () => {
       >
         <Box style={{ display: "flex", alignItems: "center" }}>
           <Typography fontSize={"32px"} color="#022A72" fontFamily="Calibri">
-            Who we are...
+            Who We Are...
           </Typography>
         </Box>
         <Typography
-          fontSize={"18px"}
+          fontSize={"20px"}
           fontWeight={"600"}
           color="#022A72"
           fontFamily="Calibri"
         >
-          We are your strategic partners in driving health-tech innovation and
+          We are your strategic partner for driving health-tech innovation and
           growth across the United States.
         </Typography>
         <Typography color="#636262" fontFamily="Calibri" fontSize={"18px"}>
-          With decades of expertise in designing, developing, and launching
-          digital health solutions, we empower companies to navigate the
-          complexities of the U.S. healthcare ecosystem and achieve sustainable
-          success.
+          Leveraging decades of expertise in designing, developing, and
+          launching digital health solutions, we empower companies to navigate
+          the complexities of the U.S. healthcare ecosystem and achieve
+          sustainable success.
         </Typography>
         <Typography
           color="#022A72"
@@ -94,34 +87,33 @@ const WhoWeAre = () => {
         </Typography>
         <List sx={{ paddingTop: 0, color: "#636262" }}>
           <ListItem sx={{ paddingTop: "3px", paddingBottom: "3px" }}>
-            <Typography fontFamily="Calibri">
+            <Typography fontFamily="Calibri" fontSize={"18px"}>
               <strong>Deep Market Expertise:&nbsp;</strong>
-              We understand the complexities of the U.S. healthcare landscape,
-              enabling us to craft strategies that resonate with key
-              decision-makers and drive meaningful impact.
+              We provide unparalleled insight into the U.S. healthcare
+              landscape, enabling you to craft resonant strategies that drive
+              meaningful impact with key decision-makers.
             </Typography>
           </ListItem>
           <ListItem sx={{ paddingTop: "3px", paddingBottom: "3px" }}>
-            <Typography fontFamily="Calibri">
-              <strong>Ecosystem Connectivity:&nbsp;</strong>
-              Our extensive network connects you with providers, payers,
-              investors, and other critical stakeholders, unlocking unparalleled
-              growth opportunities.
+            <Typography fontFamily="Calibri" fontSize={"18px"}>
+              <strong>Extensive Network:&nbsp;</strong>
+              Our network connects you with providers, payers, investors, and
+              other critical stakeholders, unlocking unparalleled growth
+              opportunities.
             </Typography>
           </ListItem>
           <ListItem sx={{ paddingTop: "3px", paddingBottom: "3px" }}>
-            <Typography fontFamily="Calibri">
-              <strong>Tailored Growth Strategies:&nbsp;</strong>
-              We don&#39;t believe in one-size-fits-all solutions. Instead, we
-              create customized strategies aligned with your business goals,
-              ensuring measurable results and sustainable success.
+            <Typography fontFamily="Calibri" fontSize={"18px"}>
+              <strong>Customized Strategies:&nbsp;</strong>
+              We move away from one-size-fits-all solutions by creating tailored
+              strategies aligned with your specific business goals, ensuring
+              measurable results and sustainable success.
             </Typography>
           </ListItem>
         </List>
         <Typography fontSize={"18px"} fontFamily="Calibri" color="#636262">
-          At HxP, we don&#39;t just help you navigate the healthcare
-          ecosystem—we help you thrive in it. Let&#39;s build the future of
-          health-tech together.
+          At HxP, we don&#39;t just navigate the healthcare ecosystem—we propel you
+          to thrive within it. Let&#39;s build the future of health-tech together..
         </Typography>
         <Link
           to="ourExperts"

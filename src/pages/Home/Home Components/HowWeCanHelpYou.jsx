@@ -216,7 +216,7 @@ const HowWeCanHelpYou = ({ offer, setOffer }) => {
             </Box>
           </FloatingTextBox>
           <Box style={{ position: "relative" }}>
-            <img src="./src/assets/Group 178@2x(1).png" />
+            <img src="./assets/Group 178@2x(1).png" />
             <BrandText>HxP</BrandText>
           </Box>
         </Box>

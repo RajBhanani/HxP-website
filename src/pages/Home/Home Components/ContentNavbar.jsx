@@ -54,6 +54,7 @@ const ContentNavbar = ({ activeSection }) => {
                   : "rgba(26, 37, 79)"
               }
               fontWeight={600}
+              fontFamily={"Calibri"}
             >
               {section.label.toUpperCase()}
             </Typography>

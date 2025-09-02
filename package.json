@@ -1,10 +1,11 @@
 {
-  "name": "first-site",
+  "name": "healthxpartner",
+  "homepage": "http://healthxpartner.com/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -17,6 +18,7 @@
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-scroll": "^1.9.3"
   },
   "devDependencies": {

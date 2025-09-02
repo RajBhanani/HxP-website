@@ -13,7 +13,7 @@ import React from "react";
 
 const StyledCard = styled(Card)(({ theme }) => ({
   width: "350px",
-  height: "175px",
+  height: "125px",
   padding: "10px",
   display: "flex",
   justifyContent: "center",
@@ -21,36 +21,42 @@ const StyledCard = styled(Card)(({ theme }) => ({
   backgroundColor: "white",
   borderLeft: "10px solid #F99929",
   borderRadius: "10px",
+  "& p": {
+    fontSize: "20px",
+  },
   [theme.breakpoints.down("md")]: {
-    height: "150px",
-    width: "300px",
+    height: "75px",
+    width: "325px",
+    "& p": {
+      fontSize: "18px",
+    },
   },
 }));
 
-const BannerCard = ({ text, img, link }) => {
+const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
+  width: "90px",
+  height: "70px",
+  [theme.breakpoints.down("md")]: {
+    transform: "scale(0.7)",
+  },
+}));
+
+const BannerCard = ({ text, img }) => {
   return (
     <StyledCard>
       <Box
         style={{ display: "flex", flexDirection: "row", alignItems: "center" }}
       >
-        <CardMedia
+        <StyledCardMedia
           component={"img"}
-          sx={{ width: "90px", height: "70px" }}
-          image={`src/assets/${img}`}
+          image={`./assets/${img}`}
           alt="image"
         />
         <CardContent>
-          <Typography color="#465489" fontWeight={600} fontFamily={"Verdana"}>
+          <Typography color="#465489" fontWeight={600} fontFamily={"Calibri"}>
             {text}
           </Typography>
         </CardContent>
-        <CardActions>
-          {link && (
-            <Button variant="outlined" onClick={() => { }}>
-              Know More
-            </Button>
-          )}
-        </CardActions>
       </Box>
     </StyledCard>
   );
